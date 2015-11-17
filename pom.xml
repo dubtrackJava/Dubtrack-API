@@ -23,6 +23,14 @@
             <organization>ElecEntertainment</organization>
             <organizationUrl>https://larry1123.net/</organizationUrl>
         </developer>
+        <developer>
+            <id>1337</id>
+            <name>Banksy</name>
+            <email>cats@riseup.net</email>
+            <url>https://temperr.moe</url>
+            <organization>Pomf</organization>
+            <organizationUrl>https://pomf.cat/</organizationUrl>
+        </developer>
     </developers>
 
     <ciManagement>
