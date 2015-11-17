@@ -74,6 +74,14 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>repo1123</id>
+            <name>Larry1123's Repo</name>
+            <url>http://public.repo.larry1123.net/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
