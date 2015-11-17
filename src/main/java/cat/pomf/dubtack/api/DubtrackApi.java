@@ -7,16 +7,15 @@ import cat.pomf.dubtack.api.auth.DubtrackAccount;
  * @since 0.1.0
  */
 public class DubtrackApi {
+
     private DubtrackAccount account;
 
-    public DubtrackApi(DubtrackAccount account){
+    public DubtrackApi(DubtrackAccount account) {
         this.account = account;
     }
 
-    public void login(){
-
+    public void login() {
         // get dubtrack account, check if type is token or pw, login with it.
     }
-
 
 }
