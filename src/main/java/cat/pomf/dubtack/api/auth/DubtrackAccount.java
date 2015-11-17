@@ -7,6 +7,7 @@ package cat.pomf.dubtack.api.auth;
 public class DubtrackAccount {
     private String username, password, token;
     private AccountType accountType;
+
     public String getUsername() {
         return username;
     }
@@ -15,6 +16,9 @@ public class DubtrackAccount {
         return password;
     }
 
+    public AccountType getAccountType() {
+        return accountType;
+    }
 
     public DubtrackAccount(String username, String password) {
         this.username = username;
