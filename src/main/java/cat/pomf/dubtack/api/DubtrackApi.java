@@ -10,7 +10,7 @@ public class DubtrackApi {
     private DubtrackAccount account;
 
     public DubtrackApi(DubtrackAccount account){
-
+        this.account = account;
     }
 
     public void login(){

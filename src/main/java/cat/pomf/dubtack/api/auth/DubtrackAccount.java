@@ -1,7 +1,8 @@
 package cat.pomf.dubtack.api.auth;
 
 /**
- * Created by root on 11/16/2015.
+ * @author Banksy
+ * @since 0.1.0
  */
 public class DubtrackAccount {
     private String username, password, token;
