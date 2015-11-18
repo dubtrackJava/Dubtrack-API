@@ -35,7 +35,7 @@
 
     <ciManagement>
         <system>Jenkins</system>
-        <url>https://ci.larry1123.net/job/EEUtils/</url>
+        <url>https://ci.larry1123.net/job/Dubtrack-API/</url>
     </ciManagement>
 
     <licenses>
@@ -59,8 +59,8 @@
     <distributionManagement>
         <site>
             <id>repo1123</id>
-            <name>EEUtils Site</name>
-            <url>dav:http://repo.larry1123.net/content/sites/eeutils_site/</url>
+            <name>Dubtrack-API Site</name>
+            <url>dav:http://repo.larry1123.net/content/sites/dubtrack_api_site/</url>
         </site>
         <repository>
             <id>repo1123</id>
