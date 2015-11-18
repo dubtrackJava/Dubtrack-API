@@ -258,6 +258,25 @@
                 <build.number>-${BUILD_NUMBER}</build.number>
             </properties>
         </profile>
+        <!-- Webdav stuff needed for jenkins -->
+        <profile>
+            <id>site-deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>3.4</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.apache.maven.wagon</groupId>
+                                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                                <version>2.6</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
     <reporting>
