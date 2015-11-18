@@ -150,7 +150,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
             <!-- JAR creation plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -183,6 +182,18 @@
                         </manifestSections>
                     </archive>
                 </configuration>
+            </plugin>
+            <!-- Webdav stuff needed for jenkins -->
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.4</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.wagon</groupId>
+                        <artifactId>wagon-webdav-jackrabbit</artifactId>
+                        <version>2.6</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
@@ -257,25 +268,6 @@
             <properties>
                 <build.number>-${BUILD_NUMBER}</build.number>
             </properties>
-        </profile>
-        <!-- Webdav stuff needed for jenkins -->
-        <profile>
-            <id>site-deploy</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-site-plugin</artifactId>
-                        <version>3.4</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.apache.maven.wagon</groupId>
-                                <artifactId>wagon-webdav-jackrabbit</artifactId>
-                                <version>2.6</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                </plugins>
-            </build>
         </profile>
     </profiles>
 
