@@ -8,6 +8,7 @@
     <artifactId>Dubtrack-API</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <inceptionYear>2015</inceptionYear>
+    <name>Dubtrack API</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
