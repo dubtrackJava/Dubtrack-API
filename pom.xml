@@ -111,6 +111,10 @@
             <groupId>com.pubnub</groupId>
             <artifactId>pubnub</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.mashape.unirest</groupId>
+            <artifactId>unirest-java</artifactId>
+        </dependency>
         <!-- Test Dependencies -->
         <dependency>
             <groupId>junit</groupId>
@@ -360,6 +364,12 @@
                 <groupId>com.pubnub</groupId>
                 <artifactId>pubnub</artifactId>
                 <version>3.7.5</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.mashape.unirest</groupId>
+                <artifactId>unirest-java</artifactId>
+                <version>1.4.7</version>
                 <scope>compile</scope>
             </dependency>
             <!-- Test Dependencies -->
