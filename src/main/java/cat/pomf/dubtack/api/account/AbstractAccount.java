@@ -13,26 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api;
+package cat.pomf.dubtack.api.account;
 
-import cat.pomf.dubtack.api.auth.DubtrackAccount;
+import cat.pomf.dubtack.api.auth.Token;
 
 /**
  * @author Larry1123
  * @since 0.1.0
- *
- * TODO rework in favor of more abstract methods
  */
-public class DubtrackApi {
+public class AbstractAccount implements Account {
 
-    private DubtrackAccount account;
+    private final Token token;
 
-    public DubtrackApi(DubtrackAccount account) {
-        this.account = account;
+    public AbstractAccount(Token token) {
+        this.token = token;
     }
 
-    public void login() {
-        // get dubtrack account, check if type is token or pw, login with it.
+    @Override
+    public Token getToken() {
+        return token;
     }
 
 }
