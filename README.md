@@ -30,7 +30,7 @@ Maven
 JavaDocs
 -----------
 
-Primary: https://repo.larry1123.net/content/sites/dubtrack_api_site/apidocs/  
+Primary: http://repo.larry1123.net/content/sites/dubtrack_api_site/apidocs/  
 Jenkins: https://ci.larry1123.net/job/Dubtrack-API/javadocs/  
 
 Compilation
