@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cat.pomf.dubtack</groupId>
+    <groupId>net.larry1123.dubtack</groupId>
     <artifactId>Dubtrack-API</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <inceptionYear>2015</inceptionYear>
@@ -170,10 +170,10 @@
                         <manifestEntries>
                             <Implementation-Title>${project.name}</Implementation-Title>
                             <Implementation-Version>${project.version}</Implementation-Version>
-                            <Implementation-Vendor>${author}</Implementation-Vendor>
+                            <Implementation-Vendor>Dubtrack Java Team</Implementation-Vendor>
                             <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
                             <Specification-Title>${project.name}</Specification-Title>
-                            <Specification-Vendor>${author}</Specification-Vendor>
+                            <Specification-Vendor>Dubtrack Java Team</Specification-Vendor>
                             <Specification-Vendor-Id>${project.groupId}</Specification-Vendor-Id>
                             <Sealed>true</Sealed>
                         </manifestEntries>

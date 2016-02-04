@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.account;
+package net.larry1123.dubtack.api.account;
 
-import cat.pomf.dubtack.api.auth.Token;
+import net.larry1123.dubtack.api.auth.Token;
 
 /**
  * @author Larry1123

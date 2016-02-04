@@ -13,32 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.auth;
+package net.larry1123.dubtack.api.auth;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class Token {
+public interface Authenticator {
 
-    private final String tokenString;
-
-    public Token(String tokenString) {
-        this.tokenString = tokenString;
-    }
-
-    public String getTokenString() {
-        return tokenString;
-    }
-
-    @Override
-    public String toString() {
-        return getTokenString();
-    }
-
-    @Override
-    public int hashCode() {
-        return getTokenString().hashCode();
-    }
+    Token authenticate();
 
 }

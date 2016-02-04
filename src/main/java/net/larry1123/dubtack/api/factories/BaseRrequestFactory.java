@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.factories;
+package net.larry1123.dubtack.api.factories;
 
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.request.BaseRequest;

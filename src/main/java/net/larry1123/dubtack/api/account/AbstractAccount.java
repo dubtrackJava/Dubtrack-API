@@ -13,13 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.auth;
+package net.larry1123.dubtack.api.account;
+
+import net.larry1123.dubtack.api.auth.Token;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- *
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager {
+public class AbstractAccount implements Account {
+
+    private final Token token;
+
+    public AbstractAccount(Token token) {
+        this.token = token;
+    }
+
+    @Override
+    public Token getToken() {
+        return token;
+    }
+
 }

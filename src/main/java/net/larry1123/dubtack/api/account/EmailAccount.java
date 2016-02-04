@@ -13,25 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.account;
+package net.larry1123.dubtack.api.account;
 
-import cat.pomf.dubtack.api.auth.Token;
+import net.larry1123.dubtack.api.auth.Token;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class AbstractAccount implements Account {
+public class EmailAccount extends AbstractAccount {
 
-    private final Token token;
-
-    public AbstractAccount(Token token) {
-        this.token = token;
-    }
-
-    @Override
-    public Token getToken() {
-        return token;
+    public EmailAccount(Token token) {
+        // Currently just a template
+        super(token);
     }
 
 }

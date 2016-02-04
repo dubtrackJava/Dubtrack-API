@@ -13,14 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cat.pomf.dubtack.api.auth;
+package net.larry1123.dubtack.api;
+
+import net.larry1123.dubtack.api.auth.DubtrackAccount;
 
 /**
  * @author Larry1123
  * @since 0.1.0
+ *
+ * TODO rework in favor of more abstract methods
  */
-public interface Authenticator {
+public class DubtrackApi {
 
-    Token authenticate();
+    private DubtrackAccount account;
+
+    public DubtrackApi(DubtrackAccount account) {
+        this.account = account;
+    }
+
+    public void login() {
+        // get dubtrack account, check if type is token or pw, login with it.
+    }
 
 }
