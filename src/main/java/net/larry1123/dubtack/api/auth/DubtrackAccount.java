@@ -18,7 +18,7 @@ package net.larry1123.dubtack.api.auth;
 /**
  * @author Banksy
  * @since 0.1.0
- *
+ * <p>
  * TODO remove in favor of more abstract classes
  */
 public class DubtrackAccount {

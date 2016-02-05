@@ -13,12 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.queue;
+
+import net.larry1123.dubtack.api.dub.Dub;
+import net.larry1123.dubtack.api.users.User;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface DubVoteElement {
+
+    String getId();
+
+    Dub getType();
+
+    long getCreated();
+
+    long getUpdated();
+
+    String getFkid();
+
+    // Likely able to make this an ENUM but I will need to know what the hell it is
+    String getModel();
+
+    String getUserId();
+
+    //
+
+    User getUser();
+
+}

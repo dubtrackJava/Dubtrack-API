@@ -13,12 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api;
+
+import java.net.URL;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface Image {
+
+    String getPublicId();
+
+    int getVersion();
+
+    int getWidth();
+
+    int getHeight();
+
+    String getFormat();
+
+    String getResourceType();
+
+    Iterable<String> getTags();
+
+    int getBytes();
+
+    String getType();
+
+    String getEtag();
+
+    URL getUrl();
+
+    URL getSecureUrl();
+
+}

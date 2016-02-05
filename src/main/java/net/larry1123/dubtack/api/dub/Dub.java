@@ -13,12 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.dub;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public enum Dub {
+
+    UPDUB,
+    DOWNDUB;
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase();
+    }
+
+}

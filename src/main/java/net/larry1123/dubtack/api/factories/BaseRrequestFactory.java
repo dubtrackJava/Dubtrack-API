@@ -17,6 +17,8 @@ package net.larry1123.dubtack.api.factories;
 
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.request.BaseRequest;
+import com.mashape.unirest.request.HttpRequest;
+import com.mashape.unirest.request.HttpRequestWithBody;
 
 /**
  * Truly this is just a placeholder right now
@@ -26,140 +28,164 @@ import com.mashape.unirest.request.BaseRequest;
  */
 public class BaseRrequestFactory {
 
+    public static BaseRrequestFactory requestFactory = new BaseRrequestFactory();
+
     String urlBase = "https://api.dubtrack.fm";
 
     // this resource retrieves a list of user playlists
-    public BaseRequest getPlaylist() {
+    public HttpRequest getPlaylist() {
         return Unirest.get(urlBase + "/playlist");
     }
 
     // Create a playlist
-    public BaseRequest postPlaylist() {
+    public HttpRequestWithBody postPlaylist() {
         return Unirest.post(urlBase + "/playlist");
     }
 
     // this resource retrieves songs in a playlist
-    public BaseRequest getPlaylistID() {
+    // TODO /playlist/{playlistid} is 404 /playlist/{[playlistid}/songs has the wanted function
+    public HttpRequest getPlaylistId() {
         return Unirest.get(urlBase + "/playlist/{playlistid}");
     }
 
     // Delete a playlist
-    public BaseRequest deletePlaylistID() {
+    public HttpRequestWithBody deletePlaylistId() {
         return Unirest.delete(urlBase + "/playlist/{playlistid}");
     }
 
     // Add a song to playlist
-    public BaseRequest postPlaylistIDSongs() {
+    public HttpRequestWithBody postPlaylistIdSongs() {
         return Unirest.post(urlBase + "/playlist/{playlistid}/songs");
     }
 
     // Remove a song from playlist
-    public BaseRequest deletePlaylistIDSongsID() {
-        return Unirest.delete(urlBase + "/playlist/{playlistid}/songs/{songid]");
+    public HttpRequestWithBody deletePlaylistIdSongsId() {
+        return Unirest.delete(urlBase + "/playlist/{playlistid}/songs/{songid}");
     }
 
     // Get room playlist history
-    public BaseRequest getRoomHistory() {
+    public HttpRequest getRoomHistory() {
         return Unirest.get(urlBase + "/room/{roomid}/playlist/history");
     }
 
     // Get room active song dubs
-    public BaseRequest getRoomActiveDubs() {
+    public HttpRequest getRoomActiveDubs() {
         return Unirest.get(urlBase + "/room/{roomid}/playlist/active/dubs");
     }
 
     // Dubup or down current song
-    public BaseRequest postRoomActiveDubs() {
+    public HttpRequestWithBody postRoomActiveDubs() {
         return Unirest.post(urlBase + "/room/{roomid}/playlist/active/dubs");
     }
 
     // Get room active song
-    public BaseRequest getRoomPlaylist() {
+    public HttpRequest getRoomPlaylist() {
         return Unirest.get(urlBase + "/room/{roomid}/playlist/active");
     }
 
     // Get room active song
-    public BaseRequest postRoomPlaylist() {
+    public HttpRequestWithBody postRoomPlaylist() {
         return Unirest.post(urlBase + "/room/{roomid}/playlist/active");
     }
 
     // Get user room queue
-    public BaseRequest getUserRoomQueue() {
+    public HttpRequest getUserRoomQueue() {
         return Unirest.get(urlBase + "/user/session/room/{roomid}/queue");
     }
 
     // Send a message on the chat
-    public BaseRequest postChat() {
-        return Unirest.get(urlBase + "/chat/{roomid}");
+    public HttpRequestWithBody postChat() {
+        return Unirest.post(urlBase + "/chat/{roomid}");
     }
 
     // Returns a list of active rooms
-    public BaseRequest getRoom() {
+    public HttpRequest getRoom() {
         return Unirest.get(urlBase + "/room");
     }
 
     // creates a room (there is a limit of 5 rooms per user)
-    public BaseRequest postRoom() {
+    public HttpRequestWithBody postRoom() {
         return Unirest.post(urlBase + "/room");
     }
 
     // Returns room details.
-    public BaseRequest getRoomID() {
-        return Unirest.get(urlBase + "/room/{id|roomUrl}");
+    public HttpRequest getRoomId() {
+        return Unirest.get(urlBase + "/room/{roomid}");
+    }
+
+    // Hey look something that is not listed!
+    // Get list of Users!
+    public HttpRequest getRoomIdUsers() {
+        return Unirest.get(urlBase + "/room/{roomid}/users");
     }
 
     // Join room, if user.muted is set to true user shouldn't send chat requests
-    public BaseRequest postRoomIDUsers() {
+    public HttpRequestWithBody postRoomIdUsers() {
         return Unirest.post(urlBase + "/room/{roomid}/users");
     }
 
+    // Get RoomUser Info!
+    public HttpRequest getRoomIdUsersId() {
+        return Unirest.get(urlBase + "/room/{roomid}/users/{userid}");
+    }
+
     // Leave room
-    public BaseRequest deleteRoomIDUsers() {
+    public HttpRequestWithBody deleteRoomIdUsers() {
         return Unirest.delete(urlBase + "/room/{roomid}/users");
     }
 
+    // Returns list of users in the room's playlist
+    public HttpRequest getRoomIdPlaylist() {
+        return Unirest.get(urlBase + "/room/{roomid}/playlist");
+    }
+
+    // Returns a list of songs in the room's playlist
+    public HttpRequest getRoomIdPlaylistDetails() {
+        return Unirest.get(urlBase + "/room/{roomid}/playlist/details");
+    }
+
     // Returns a JSON object with user details
-    public BaseRequest getUserID() {
-        return Unirest.get(urlBase + "/user/{id}");
+    public HttpRequest getUserId() {
+        return Unirest.get(urlBase + "/user/{userid}");
     }
 
     // Returns an image source
-    public BaseRequest getUserIDImage() {
-        return Unirest.get(urlBase + "/user/{id}/image");
+    public HttpRequest getUserIdImage() {
+        return Unirest.get(urlBase + "/user/{userid}/image");
     }
 
     // Returns a large image source
-    public BaseRequest getUserIDImageLarge() {
-        return Unirest.get(urlBase + "/user/{id}/image/large");
+    public BaseRequest getUserIdImageLarge() {
+        return Unirest.get(urlBase + "/user/{userid}/image/large");
     }
 
     // get a list of people following
-    public BaseRequest getUserIDFollowing() {
-        return Unirest.get(urlBase + "/user/{id}/following");
+    public HttpRequest getUserIdFollowing() {
+        return Unirest.get(urlBase + "/user/{userid}/following");
     }
 
     // Follow user
-    public BaseRequest postUserIDFollowing() {
-        return Unirest.post(urlBase + "/user/{id}/following");
+    public HttpRequestWithBody postUserIdFollowing() {
+        return Unirest.post(urlBase + "/user/{userid}/following");
     }
 
     // Unfollow user
-    public BaseRequest deleteUserIDFollowing() {
-        return Unirest.delete(urlBase + "/user/{id}/following");
+    public HttpRequestWithBody deleteUserIdFollowing() {
+        return Unirest.delete(urlBase + "/user/{userid}/following");
     }
 
     // get a list of followers
-    public BaseRequest getUserIDFollows() {
-        return Unirest.get(urlBase + "/user/{id}/follows");
+    public HttpRequest getUserIdFollows() {
+        return Unirest.get(urlBase + "/user/{userid}/follows");
     }
 
     // Get a list of songs
-    public BaseRequest getSong() {
+    public HttpRequest getSong() {
         return Unirest.get(urlBase + "/song");
     }
 
     // Get song details
-    public BaseRequest getSongID() {
+    public HttpRequest getSongId() {
         return Unirest.get(urlBase + "/song/{songid}");
     }
 

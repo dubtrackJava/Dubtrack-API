@@ -20,7 +20,7 @@ import net.larry1123.dubtack.api.auth.DubtrackAccount;
 /**
  * @author Larry1123
  * @since 0.1.0
- *
+ * <p>
  * TODO rework in favor of more abstract methods
  */
 public class DubtrackApi {

@@ -32,13 +32,13 @@ public class Token {
     }
 
     @Override
-    public String toString() {
-        return getTokenString();
+    public int hashCode() {
+        return getTokenString().hashCode();
     }
 
     @Override
-    public int hashCode() {
-        return getTokenString().hashCode();
+    public String toString() {
+        return getTokenString();
     }
 
 }

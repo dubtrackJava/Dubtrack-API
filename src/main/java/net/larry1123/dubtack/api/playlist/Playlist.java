@@ -13,12 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.playlist;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface Playlist {
+
+    String getPlaylistID();
+
+    String getName();
+
+    int getStatus();
+
+    boolean getRemoved();
+
+    boolean isPublic();
+
+    long getCreated();
+
+    String getUserID();
+
+    int getTotalItems();
+
+    // Not sure if this will stay here
+    Iterable<PlaylistElement> getSongs();
+
+}

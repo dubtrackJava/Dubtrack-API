@@ -13,12 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.songs;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface SongYouTubeImages extends SongImages {
+
+    YouTubeImage getDefaultImage();
+
+    YouTubeImage getMediumImage();
+
+    YouTubeImage getHighImage();
+
+    YouTubeImage getStandardImage();
+
+    YouTubeImage getMaxresImage();
+
+}

@@ -13,12 +13,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.queue;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface SongMeta {
+
+    String getId();
+
+    long getCreated();
+
+    boolean isActive();
+
+    boolean isPlayed();
+
+    boolean wasSkipped();
+
+    int getOrder();
+
+    String getRoomId();
+
+    int getSongLength();
+
+    int getUpdubs();
+
+    int getDowndubs();
+
+    String getUserId();
+
+    String getSongId();
+
+    long getPlayed();
+
+    int getGrabs();
+
+}

@@ -13,12 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.queue;
+
+import net.larry1123.dubtack.api.dub.Dubable;
+import net.larry1123.dubtack.api.songs.Song;
+import net.larry1123.dubtack.api.users.User;
 
 /**
- * @author Banksy
+ * @author Larry1123
  * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
  */
-public class AuthManager { }
+public interface QueueElement extends Dubable {
+
+    String getId();
+
+    long getCreated();
+
+    boolean isActive();
+
+    boolean isPlayed();
+
+    boolean wasSkipped();
+
+    int getOrder();
+
+    String getRoomId();
+
+    int getSongLength();
+
+    String getUserId();
+
+    String getSongId();
+
+    //
+
+    User getUser();
+
+    Song getSong();
+
+}

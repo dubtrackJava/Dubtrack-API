@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.auth;
+package net.larry1123.dubtack.api.users;
+
+import net.larry1123.dubtack.api.Image;
 
 /**
- * @author Banksy
- * @since 0.1.0
- * <p>
- * TODO remove in favor of more abstract classes
+ * @author Larry1123
+ * @since 2/5/2016
  */
-public class AuthManager { }
+public interface ProfileImage extends Image { }
