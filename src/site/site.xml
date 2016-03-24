@@ -1,37 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/DECORATION/1.4.0"
-         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.4.0 http://maven.apache.org/xsd/decoration-1.4.0.xsd"
-         name="EEUtils">
+<project name="${project.name}"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://maven.apache.org/DECORATION/1.4.0"
+        xsi:schemaLocation="http://maven.apache.org/DECORATION/1.4.0 http://maven.apache.org/xsd/decoration-1.4.0.xsd">
     <skin>
-        <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-fluido-skin</artifactId>
-        <version>1.3.1</version>
+        <groupId>lt.velykis.maven.skins</groupId>
+        <artifactId>reflow-maven-skin</artifactId>
+        <version>1.1.1</version>
     </skin>
+    <custom>
+        <reflowSkin>
+            <!-- Make this to 'false' for local development, i.e. file:// URLs -->
+            <protocolRelativeURLs>true</protocolRelativeURLs>
+            <theme>bootswatch-cyborg</theme>
+            <brand>
+                <name>
+                    <![CDATA[
+                    <span class="dubtrack-logo">Dubtrack.fm</span> <span class="dub-highlight">Dubtrack</span> <span class="api-highlight">API</span>
+                    ]]>
+                </name>
+                <href>./</href>
+            </brand>
+            <toc>top</toc>
+            <topNav>Maven Documentation|Contribute</topNav>
+            <highlightJs>true</highlightJs>
+            <highlightJsTheme>darkula</highlightJsTheme>
+            <bottomNav maxSpan="9">
+                <column>Main|Contribute</column>
+                <column>reports</column>
+            </bottomNav>
+            <pages>
+                <source-repository>
+                    <highlightJs>false</highlightJs>
+                </source-repository>
+                <issue-tracking>
+                    <highlightJs>false</highlightJs>
+                    <toc>false</toc>
+                </issue-tracking>
+                <license>
+                    <highlightJs>false</highlightJs>
+                    <toc>false</toc>
+                </license>
+                <project-info>
+                    <toc>false</toc>
+                </project-info>
+                <dependencies>
+                    <tocTopMax>4</tocTopMax>
+                </dependencies>
+            </pages>
+        </reflowSkin>
+    </custom>
     <bannerLeft>
-        <name>${project.name}</name>
+        <name>
+            <![CDATA[
+            <span class="dub-highlight">Dubtrack</span> <span class="api-highlight">API</span>
+            ]]>
+        </name>
         <href>/</href>
     </bannerLeft>
+    <publishDate position="bottom" format="MM-dd-yyyy"/>
+    <version position="bottom"/>
     <body>
         <links>
-            <item name="Source" href="${project.scm.url}" target="_blank"/>
-            <item name="Continuous Integration" href="${project.ciManagement.url}" target="_blank"/>
+            <item name="GitHub" href="${project.scm.url}" target="_blank"/>
+            <item name="Jenkins" href="${project.ciManagement.url}" target="_blank"/>
         </links>
-        <menu name="${project.name}">
-            <item name="Homepage" href="/"/>
-            <item name="Source" href="${project.scm.url}" target="_blank"/>
-            <item name="Continuous Integration" href="${project.ciManagement.url}" target="_blank"/>
+        <breadcrumbs>
+            <item name="Dubtrack API" href="/"/>
+        </breadcrumbs>
+        <menu name="Main">
+            <item name="Home" href="./"/>
+            <item name="GitHub" href="${project.scm.url}" target="_blank"/>
+            <item name="Jenkins" href="${project.ciManagement.url}" target="_blank"/>
             <item name="Maven Repo" href="http://public.repo.larry1123.net/" target="_blank"/>
         </menu>
-        <menu name="API Documentation">
-            <item name="JavaDocs" href="apidocs/index.html"/>
+        <menu name="Contribute">
+            <item name="Fork on GitHub" href="${project.scm.url}" target="_blank"/>
+            <item name="Issues" href="${project.issueManagement.url}" target="_blank"/>
         </menu>
-        <menu ref="reports"/>
+        <menu name="Maven Documentation" ref="reports" inherit="bottom"/>
     </body>
-    <custom>
-        <fluidoSkin>
-            <googleSearch>
-                <sitesearch/>
-            </googleSearch>
-        </fluidoSkin>
-    </custom>
 </project>

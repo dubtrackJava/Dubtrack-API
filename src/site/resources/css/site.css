@@ -1,0 +1,40 @@
+/*
+ * Copyright 2015 ElecEntertainment & Pomf.cat
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.dub-highlight
+{
+    color: #e3017d;
+}
+
+.api-highlight
+{
+    color: #73b9c7;
+}
+
+.dubtrack-logo
+{
+    cursor:           pointer;
+    display:          inline-block;
+    text-indent:      -159984px;
+    text-indent:      -9999rem;
+    width:            16px;
+    width:            1rem;
+    height:           16px;
+    height:           1rem;
+    background-image: url(//res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1400351432/dubtrack_new_logo_fvpxa6.png);
+    background-size:  1rem 1rem;
+    margin-right:     0.25rem;
+}
