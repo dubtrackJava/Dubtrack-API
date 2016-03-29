@@ -15,18 +15,51 @@
  */
 package net.larry1123.dubtack.api.room;
 
-import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
+import com.google.api.client.util.Key;
 
-import java.io.IOException;
+import java.net.URL;
+import java.util.List;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class RoomIdUsersGet {
+public class BackgroundData {
 
-    public RoomIdUsersGet() throws IOException {
-        APIHttpRequestFactory.apiRequestFactory.getRoomIdUsers();
-    }
+    @Key("public_id")
+    String publicId;
+
+    @Key
+    int version;
+
+    @Key
+    int width;
+
+    @Key
+    int height;
+
+    @Key
+    String format;
+
+    @Key("resource_type")
+    String resourceType;
+
+    @Key
+    List<String> tags;
+
+    @Key
+    int bytes;
+
+    @Key
+    String type;
+
+    @Key("etag")
+    String eTag;
+
+    @Key
+    URL url;
+
+    @Key("secure_url")
+    URL secureUrl;
 
 }

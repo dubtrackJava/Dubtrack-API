@@ -15,7 +15,9 @@
  */
 package net.larry1123.dubtack.api.room;
 
-import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
+import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
+
+import java.io.IOException;
 
 /**
  * @author Larry1123
@@ -23,8 +25,8 @@ import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
  */
 public class RoomPost {
 
-    public RoomPost() {
-        BaseRrequestFactory.requestFactory.postRoom();
+    public RoomPost() throws IOException {
+        APIHttpRequestFactory.apiRequestFactory.postRoom();
     }
 
 }

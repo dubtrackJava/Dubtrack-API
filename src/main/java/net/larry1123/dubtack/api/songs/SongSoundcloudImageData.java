@@ -13,20 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.room;
+package net.larry1123.dubtack.api.songs;
 
-import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
+import com.google.api.client.util.Key;
 
-import java.io.IOException;
+import java.net.URL;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class RoomIdUsersGet {
+public class SongSoundcloudImageData {
 
-    public RoomIdUsersGet() throws IOException {
-        APIHttpRequestFactory.apiRequestFactory.getRoomIdUsers();
-    }
+    @Key
+    URL artworkurl;
+
+    @Key
+    URL waveformurl;
 
 }

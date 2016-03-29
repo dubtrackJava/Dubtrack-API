@@ -15,18 +15,24 @@
  */
 package net.larry1123.dubtack.api.room;
 
-import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
-
-import java.io.IOException;
+import com.google.api.client.util.Key;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class RoomIdUsersGet {
+public class RoomCurrentSongData {
 
-    public RoomIdUsersGet() throws IOException {
-        APIHttpRequestFactory.apiRequestFactory.getRoomIdUsers();
-    }
+    @Key("songid")
+    String songId;
+
+    @Key
+    String type;
+
+    @Key
+    String fkid;
+
+    @Key
+    String name;
 
 }

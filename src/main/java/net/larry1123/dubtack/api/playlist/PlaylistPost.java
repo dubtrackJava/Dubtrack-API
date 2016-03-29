@@ -15,7 +15,9 @@
  */
 package net.larry1123.dubtack.api.playlist;
 
-import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
+import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
+
+import java.io.IOException;
 
 /**
  * @author Larry1123
@@ -23,8 +25,8 @@ import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
  */
 public class PlaylistPost {
 
-    public PlaylistPost() {
-        BaseRrequestFactory.requestFactory.postPlaylist();
+    public PlaylistPost() throws IOException {
+        APIHttpRequestFactory.apiRequestFactory.postPlaylist();
     }
 
 }

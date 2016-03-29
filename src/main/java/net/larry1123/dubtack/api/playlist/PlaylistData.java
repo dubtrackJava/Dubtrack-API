@@ -13,20 +13,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.larry1123.dubtack.api.room;
+package net.larry1123.dubtack.api.playlist;
 
-import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
-
-import java.io.IOException;
+import com.google.api.client.util.Key;
 
 /**
  * @author Larry1123
  * @since 0.1.0
  */
-public class RoomIdUsersGet {
+public class PlaylistData {
 
-    public RoomIdUsersGet() throws IOException {
-        APIHttpRequestFactory.apiRequestFactory.getRoomIdUsers();
-    }
+    @Key("_id")
+    String id;
+
+    @Key
+    String name;
+
+    @Key
+    int status;
+
+    @Key
+    boolean isPublic;
+
+    @Key
+    long created;
+
+    @Key
+    String type;
+
+    @Key
+    String fkid;
+
+    @Key("userid")
+    String userId;
+
+    @Key
+    int totalItems;
+
+    @Key("__v")
+    int version;
 
 }

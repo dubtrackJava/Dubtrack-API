@@ -31,7 +31,7 @@ JavaDocs
 -----------
 
 Primary: http://repo.larry1123.net/content/sites/dubtrack_api_site/apidocs/  
-Jenkins: https://ci.larry1123.net/job/Dubtrack-API/javadocs/  
+Jenkins: https://ci.larry1123.net/job/Dubtrack-API/JavaDocs/  
 
 Compilation
 =============

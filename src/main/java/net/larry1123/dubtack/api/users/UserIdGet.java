@@ -15,7 +15,9 @@
  */
 package net.larry1123.dubtack.api.users;
 
-import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
+import net.larry1123.dubtack.api.factories.APIHttpRequestFactory;
+
+import java.io.IOException;
 
 /**
  * @author Larry1123
@@ -23,8 +25,8 @@ import net.larry1123.dubtack.api.factories.BaseRrequestFactory;
  */
 public class UserIdGet {
 
-    public UserIdGet() {
-        BaseRrequestFactory.requestFactory.getUserId();
+    public UserIdGet() throws IOException {
+        APIHttpRequestFactory.apiRequestFactory.getUserId();
     }
 
 }

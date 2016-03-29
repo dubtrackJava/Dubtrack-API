@@ -119,8 +119,12 @@
             <artifactId>pubnub</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.mashape.unirest</groupId>
-            <artifactId>unirest-java</artifactId>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client-gson</artifactId>
         </dependency>
         <!-- Test Dependencies -->
         <dependency>
@@ -412,9 +416,15 @@
                 <scope>compile</scope>
             </dependency>
             <dependency>
-                <groupId>com.mashape.unirest</groupId>
-                <artifactId>unirest-java</artifactId>
-                <version>1.4.8</version>
+                <groupId>com.google.http-client</groupId>
+                <artifactId>google-http-client</artifactId>
+                <version>1.21.0</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.http-client</groupId>
+                <artifactId>google-http-client-gson</artifactId>
+                <version>1.21.0</version>
                 <scope>compile</scope>
             </dependency>
             <!-- Test Dependencies -->
