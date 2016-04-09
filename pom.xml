@@ -13,7 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <git.useNativeGit>true</git.useNativeGit>
+        <git.useNativeGit>false</git.useNativeGit>
     </properties>
 
     <organization>
